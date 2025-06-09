@@ -1,23 +1,28 @@
 # Nextra Docs Template 
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+This is a template for creating documentation with [Nextra](https://nextra.site). Nextra A simple, powerful and flexible site generation framework with everything you love from Next.js.
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
+You can use it as a starting point for your own project
 
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
+[![](https://edgeone.ai/media/64ec487b-fba7-4815-bb8d-3cfdac1a377f.png)](https://nextra-docs-template.edgeone.app/)
 
-## Quick Start
-
-Click the button to clone this repository and deploy it on Vercel:
-
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
+## Installation
+```bash
+pnpm i
+```
 
 ## Local Development
 
-First, run `pnpm i` to install the dependencies.
+```bash
+pnpm dev
+```
 
-Then, run `pnpm dev` to start the development server and visit localhost:3000.
+This command starts a local development server and opens up a browser window. Then visit localhost:3000.
 
-## License
+## Build
 
-This project is licensed under the MIT License.
+```bash
+pnpm run build
+```
+
+
