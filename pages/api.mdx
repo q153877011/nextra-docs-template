@@ -1,0 +1,129 @@
+# API Reference
+
+## Configuration
+
+### Theme Configuration
+
+```js
+// theme.config.jsx
+export default {
+  logo: <span>My Project</span>,
+  project: {
+    link: 'https://github.com/your-repo'
+  },
+  docsRepositoryBase: 'https://github.com/your-repo',
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s – My Project'
+    }
+  }
+}
+```
+
+### Next.js Configuration
+
+```js
+// next.config.js
+const withNextra = require('nextra')({
+  theme: 'nextra-theme-docs',
+  themeConfig: './theme.config.jsx'
+})
+
+module.exports = withNextra()
+```
+
+## Components
+
+### Callout
+
+```jsx
+<Callout type="info">
+  This is an info callout
+</Callout>
+
+<Callout type="warning">
+  This is a warning callout
+</Callout>
+
+<Callout type="error">
+  This is an error callout
+</Callout>
+```
+
+### Steps
+
+```jsx
+<Steps>
+  <Step title="First Step">
+    This is the first step
+  </Step>
+  <Step title="Second Step">
+    This is the second step
+  </Step>
+  <Step title="Third Step">
+    This is the third step
+  </Step>
+</Steps>
+```
+
+### Tabs
+
+```jsx
+<Tabs items={['React', 'Vue', 'Svelte']}>
+  <Tab>
+    React content
+  </Tab>
+  <Tab>
+    Vue content
+  </Tab>
+  <Tab>
+    Svelte content
+  </Tab>
+</Tabs>
+```
+
+## Hooks
+
+### useTheme
+
+```jsx
+import { useTheme } from 'nextra-theme-docs'
+
+export default function Component() {
+  const { theme, setTheme } = useTheme()
+  return (
+    <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+      Toggle theme
+    </button>
+  )
+}
+```
+
+### useConfig
+
+```jsx
+import { useConfig } from 'nextra-theme-docs'
+
+export default function Component() {
+  const config = useConfig()
+  return <div>{config.title}</div>
+}
+```
+
+## Utilities
+
+### withToc
+
+```jsx
+import { withToc } from 'nextra-theme-docs'
+
+export default withToc(Component)
+```
+
+### withLayout
+
+```jsx
+import { withLayout } from 'nextra-theme-docs'
+
+export default withLayout(Component)
+``` 

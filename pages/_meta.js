@@ -1,7 +1,13 @@
-export default{
+export default {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "getting-started": "Getting Started",
+  "core-concepts": "Core Concepts",
+  "advanced": "Advanced",
+  "features": "Features",
+  "api-reference": "API Reference",
+  "examples": "Examples",
+  "tutorials": "Tutorials",
+  "faq": "FAQ",
   "about": {
     "title": "About",
     "type": "page"
