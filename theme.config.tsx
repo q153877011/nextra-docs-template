@@ -53,6 +53,53 @@ const config: DocsThemeConfig = {
         .nextra-sidebar [data-level="4"] {
           font-weight: normal !important;
         }
+        
+        /* Divider line between left sidebar and main content */
+        /* Target the main content area to add left border */
+        .nextra-main {
+          border-left: 1px solid #e5e7eb !important;
+          margin-left: 1rem !important;
+        }
+        
+        /* Dark mode support for divider */
+        .dark .nextra-main {
+          border-left-color: #374151 !important;
+        }
+        
+        /* Alternative approach - target the content area more specifically */
+        .nextra-container > div:first-child {
+          border-left: 1px solid #e5e7eb;
+        }
+        
+        .dark .nextra-container > div:first-child {
+          border-left-color: #374151;
+        }
+        
+        /* Ensure proper spacing for sidebar */
+        .nextra-sidebar-container {
+          border-right: 1px solid #e5e7eb !important;
+          margin-right: 1rem !important;
+        }
+        
+        .dark .nextra-sidebar-container {
+          border-right-color: #374151 !important;
+        }
+        
+        /* Remove the previous TOC border styles */
+        .nextra-toc {
+          position: relative;
+          padding-left: 1rem !important;
+        }
+        
+        /* Remove the pseudo-element from TOC */
+        .nextra-toc::before {
+          display: none;
+        }
+        
+        /* Ensure proper spacing */
+        .nextra-toc {
+          margin-left: 1rem !important;
+        }
       `}</style>
     </>
   ),
@@ -81,15 +128,6 @@ const config: DocsThemeConfig = {
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2">
             <span>MIT 2024 ©</span>
-          </div>
-          <div className="flex gap-4">
-            <a href="https://github.com/TencentEdgeOne/pages-templates" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-600">
-              GitHub 
-            </a>
-            <span> | </span>
-            <a href="https://discord.com/channels/1289135101308829758/1310963802610733066" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-600">
-              Discord
-            </a>
           </div>
         </div>
         <div className="text-sm text-gray-500">

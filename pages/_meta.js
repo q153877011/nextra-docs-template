@@ -3,10 +3,11 @@ export default {
   "getting-started": "Getting Started",
   "core-concepts": "Core Concepts",
   "advanced": "Advanced",
-  "features": "Features",
   "api-reference": "API Reference",
+  "features": "Features",
   "examples": "Examples",
   "tutorials": "Tutorials",
+  "another": "Another",
   "faq": "FAQ",
   "about": {
     "title": "About",
